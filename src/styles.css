@@ -1,0 +1,178 @@
+/* wow this is actually so nice lol */
+@import "tailwindcss";
+
+body {
+    background: darkslateblue;
+    color:white;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+
+/* you'd add background to bodies in order to */
+.body_exp {
+    background-image: url(https://images.unsplash.com/photo-1736346846457-6aa8bf750eea?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8TThqVmJMYlRSd3N8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    color:white;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+
+.body_blog{
+    background: #241a30;
+    color:white;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+/* the .<> indicates the addition of a class */
+.main{
+    display: block;
+}
+
+.sub{
+    /* Forces all images to be blocks */
+    /* now obviously we don't want all images to be like this
+    so instead we use divs
+    
+    this is the idea of classes*/
+    display: inline;
+    
+}
+
+
+.spacy{
+    margin-top: 20px;
+    display: block;
+    /* double auto allows for proper centering */
+    margin-left: auto;
+    margin-right: auto;
+}
+.journal_text{
+    color: rgb(239, 247, 255);
+    background: rgba(255, 182, 193, 0.227);
+    line-height: 40px;
+    padding: 10px;
+    /* I see so these things can be updated later on */
+    text-align: left;
+
+    /* yay!  */
+    border: 2px solid rgba(255, 0, 0, 0.363);
+    /* this softens corners*/
+    border-radius: 10px;
+    /* margin is around the border */
+    margin: 10px;
+
+}
+.follow_button{
+    /* margin-top: 100px;
+    margin-bottom: 100px; 
+    display:block; 
+    margin-left: auto; 
+    margin-right: auto; */
+
+
+    border: 2px solid #cfd9de;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: solid #0f1419;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* flexbox */
+.menu{
+    display: flex;
+    justify-content: center;
+}
+.menu_button{
+    margin: 10px;
+    border: 2px solid #cfd9de;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: solid #0f1419;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Note that tags inherit from previous tags in the 
+these are the tags prperities that are inheritied;
+https://stackoverflow.com/questions/5612302/which-css-properties-are-inherited*/
+.circle{
+    height: 150px;
+    width: 150px;
+    /* border: 150px; */
+    border-radius: 50%;
+    background: firebrick;
+    display: block;
+    margin: auto;
+}
+
+
+.blog{
+    width: 70vw;
+    min-width: 400px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    padding: 50px 0;
+}
+
+textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.title,
+.article{
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    outline: none;
+    font-size: 50px;
+    font-weight: 600;
+    color: #2d2d2d;
+    resize: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.title::placeholder,
+.article::placeholder{
+    color: #2d2d2d;
+}
+
+.article{
+    height: 500px;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    padding-bottom: 100px;
+    white-space: pre-wrap;
+}
+
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    color: black;
+  }
+  
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: black;
+  }
+

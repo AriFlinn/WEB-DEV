@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- you can use live server to have it auto refresh per save -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+
+    <script>
+        
+    </script>
+</head>
+<body class="body_exp">
+    <div>
+        <h1 style="color: white; font-style: italic;"> WELCOME TO THE EXPERIMENTS</h1>
+    </div>
+    <div>
+        <button class="circle"> <h1 > EXP </h1> </button>
+        <hr>
+    </div>
+    <div>
+        <canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">
+            Sorry, your browser does not support canvas.
+            </canvas>
+            
+            <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+            
+            // Set type of compositing
+            ctx.globalCompositeOperation = "luminosity";
+            
+            // Draw two overlapping rectangles  
+            ctx.fillStyle = "blue";
+            ctx.fillRect(10, 10, 100, 100);
+            ctx.fillStyle = "red";
+            ctx.fillRect(40, 40, 100, 100);
+            </script>
+    </div>
+    <div>
+        <script>
+            function startGame() {
+                myGamePiece = new component(30, 30, "red", 10, 120);
+                myGamePiece.gravity = 0.05;
+                myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+                myGameArea.start();
+                }
+
+                var myGameArea = {
+                canvas : document.createElement("canvas"),
+                start : function() {
+                    this.canvas.width = 480;
+                    this.canvas.height = 270;
+                    this.context = this.canvas.getContext("2d");
+                    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                    this.frameNo = 0;
+                },
+                clear : function() {
+                    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                }
+                }
+            // Make the DIV element draggable:
+        
+
+        dragElement(document.getElementById("mydiv"));
+        function dragElement(elmnt) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+            // if present, the header is where you move the DIV from:
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+            // otherwise, move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+        }
+        
+        </script>
+        
+    </div>
+    <div class="journal_text">
+        <p>HEY what is hr</p>
+        <hr>
+        <p>Hello</p>
+    </div>
+
+    
+        
+    <div id="mydiv">
+        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+        <div id="mydivheader">Click here to move</div>
+        <p>Move</p>
+        <p>this</p>
+        <p>DIV</p>
+    </div>
+    
+
+    
+
+
+</body>
+</html>

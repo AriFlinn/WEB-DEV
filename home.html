@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- so we want a simple blog that we can write things in: -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Home Page</title>
+
+    <script>
+        
+    </script>
+</head>
+
+<body class="body_blog">
+    <div>
+        <header class="navbar">
+            <div class = "fixcenter">
+                <nav class="relative">
+                    <ul class="links-container">
+                        <li class="link-item"> <a href="home.html" class="link"> HOME</a></li>
+                        <li class="link-item"> <a href="projects.html" class="link"> PROJECTS</a></li>
+                        <li class="link-item"> <a href="blog.html" class="link"> BLOG </a></li>
+                        <li class="link-item"> <a href="about.html" class="link"> ABOUT</a></li>
+                        
+            
+                    </ul>
+                </nav>
+                
+            </div>
+
+        </header>
+        <div class = "title_container">        
+            <h1> WELCOME<span class = "auto-type"></span></h1>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script>
+                var typed = new Typed(".auto-type", {
+                    strings:[", HAVE A LOOK AROUND!", "....JOSH...."],
+                    typeSpeed: 150,
+                    backSpeed: 150,
+                    backDelay: 7000,
+
+                    loop: true
+                });
+
+                // this part is ggeting user agent string:
+                const userAgent = navigator.userAgent;
+                console.log("james")
+                console.log("User Agent:", userAgent)
+            </script>
+            <h2> Anything that brain of your can think of can't be found</h2>
+
+        </div>
+    </div>
+
+</body>
